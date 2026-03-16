@@ -14,6 +14,8 @@ const navItems: NavItem[] = [
   { label: 'Home', href: '/', description: 'Overview' },
   { label: 'Neural Networks', href: '/neural-networks', description: 'Forward & backward propagation' },
   { label: 'ML Algorithms', href: '/ml-algorithms', description: 'Gradient descent, clustering, trees' },
+  { label: 'Advanced ML', href: '/advanced-algorithms', description: 'SVM, Random Forest, GMM, Naive Bayes' },
+  { label: 'CNN Visualization', href: '/cnn-visualization', description: 'Convolutional neural networks' },
   { label: 'Top 8 Algos', href: '/algorithms', description: 'Essential algorithms' },
   { label: 'Transformers', href: '/transformers', description: 'Attention mechanism & architecture' },
   { label: 'RAG Systems', href: '/rag', description: 'Retrieval-augmented generation' },

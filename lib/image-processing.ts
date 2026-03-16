@@ -344,3 +344,43 @@ export function generateSimpleDigit(width: number = 28, height: number = 28): Im
 
   return { data, width, height, channels: 1 };
 }
+
+/**
+ * Visualize a CNN filter/kernel as ImageData2D
+ * Normalizes values to 0-1 range for visualization
+ */
+export function visualizeFilter(filter: number[][]): ImageData2D {
+  const height = filter.length;
+  const width = filter[0]?.length ?? 0;
+
+  if (width === 0 || height === 0) {
+    return { data: [], width: 0, height: 0, channels: 1 };
+  }
+
+  // Find min and max values for normalization
+  let min = Infinity;
+  let max = -Infinity;
+
+  for (let i = 0; i < height; i++) {
+    for (let j = 0; j < width; j++) {
+      const val = filter[i][j];
+      min = Math.min(min, val);
+      max = Math.max(max, val);
+    }
+  }
+
+  // Normalize to 0-1 range
+  const range = max - min || 1;
+  const normalized: number[][] = [];
+
+  for (let i = 0; i < height; i++) {
+    const row: number[] = [];
+    for (let j = 0; j < width; j++) {
+      const value = (filter[i][j] - min) / range;
+      row.push(Math.max(0, Math.min(1, value)));
+    }
+    normalized.push(row);
+  }
+
+  return { data: normalized, width, height, channels: 1 };
+}

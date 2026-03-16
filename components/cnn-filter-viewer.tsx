@@ -9,7 +9,6 @@ interface CNNFilterViewerProps {
 }
 
 export function CNNFilterViewer({ filters, layerName }: CNNFilterViewerProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const canvasRefs = useRef<(HTMLCanvasElement | null)[]>([]);
   const [selectedFilter, setSelectedFilter] = useState(0);
 

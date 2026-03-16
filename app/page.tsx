@@ -2,56 +2,56 @@
 
 import Link from 'next/link';
 import { Navigation } from '@/components/navigation';
-import { ArrowRight, Brain, Zap, Network, Sparkles } from 'lucide-react';
+import { ArrowRight, Brain, Zap, Network, Sparkles, Zap as Lightning, BarChart3 } from 'lucide-react';
 
 export default function Home() {
   const features = [
     {
       icon: Brain,
       title: 'Neural Networks',
-      description: 'Forward propagation, backpropagation, activation functions, and weight optimization.',
+      description: 'See how neural networks learn by adjusting weights. Watch data flow through layers with real-time animations.',
       href: '/neural-networks',
-      tag: 'Fundamental',
+      tag: 'Start Here',
       color: 'from-primary to-primary/50',
     },
     {
       icon: Zap,
-      title: 'ML Algorithms',
-      description: 'Gradient descent, K-means, decision trees, and core learning algorithms.',
+      title: 'ML Basics',
+      description: 'Learn fundamental algorithms like regression, clustering, and decision trees with visual examples.',
       href: '/ml-algorithms',
-      tag: 'Core',
+      tag: 'Foundations',
       color: 'from-accent to-accent/50',
     },
     {
-      icon: Network,
-      title: 'Top 8 Algorithms',
-      description: 'Linear regression, logistic regression, SVM, clustering, ensemble methods.',
-      href: '/algorithms',
-      tag: 'Reference',
+      icon: BarChart3,
+      title: 'Vision & Images',
+      description: 'Understand how convolutional networks see and process images with layer-by-layer visualizations.',
+      href: '/cnn-visualization',
+      tag: 'Images',
       color: 'from-chart-1 to-chart-1/50',
     },
     {
-      icon: Sparkles,
-      title: 'Transformers',
-      description: 'Attention mechanisms, positional encoding, multi-head attention, encoder-decoder.',
-      href: '/transformers',
-      tag: 'Advanced',
+      icon: Lightning,
+      title: 'Sequences & Time',
+      description: 'Explore RNN and LSTM models that learn from sequences like text, time series, and language.',
+      href: '/rnn-lstm',
+      tag: 'Sequences',
       color: 'from-chart-2 to-chart-2/50',
     },
     {
-      icon: Network,
-      title: 'RAG Systems',
-      description: 'Retrieval-augmented generation, embeddings, vector search, multi-agent RAG.',
-      href: '/rag',
-      tag: 'Modern',
+      icon: BarChart3,
+      title: 'Learning & Decisions',
+      description: 'Watch agents learn to make optimal decisions by interacting with environments using reinforcement learning.',
+      href: '/reinforcement-learning',
+      tag: 'Interactive',
       color: 'from-chart-3 to-chart-3/50',
     },
     {
       icon: Sparkles,
-      title: 'Playground',
-      description: 'Experiment with all models and algorithms with interactive controls.',
-      href: '/playground',
-      tag: 'Practice',
+      title: 'Advanced Topics',
+      description: 'Deep dive into SVM, Random Forests, Transformers, and modern architectures with detailed explanations.',
+      href: '/advanced-algorithms',
+      tag: 'Advanced',
       color: 'from-chart-5 to-chart-5/50',
     },
   ];
@@ -97,8 +97,8 @@ export default function Home() {
       {/* Features Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-3">Learning Modules</h2>
-          <p className="text-muted-foreground mb-12">Explore interactive visualizations of AI and ML concepts</p>
+          <h2 className="text-3xl font-bold mb-3">Learning Paths</h2>
+          <p className="text-muted-foreground mb-12">Start with basics or jump to advanced topics. Each module has interactive visualizations and step-by-step explanations.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => {
